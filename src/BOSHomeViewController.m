@@ -8,6 +8,9 @@
 #import "BOSTerminalViewController.h"
 #import "BOSSettingsViewController.h"
 
+@interface BOSHomeViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@end
+
 @implementation BOSHomeViewController {
     UICollectionView *_grid;
     UICollectionViewFlowLayout *_layout;
@@ -116,7 +119,7 @@
     return header;
 }
 
-- (void)collectionView:(UICollectionView *)cv didSelectItemAtIndexPath:(ip) {
+- (void)collectionView:(UICollectionView *)cv     didSelectItemAtIndexPath:(NSIndexPath *)ip {
     UINavigationController *nav = self.navigationController;
     NSDictionary *screens = @{
         @0 : [BOSClockViewController class],
