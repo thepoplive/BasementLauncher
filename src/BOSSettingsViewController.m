@@ -51,7 +51,6 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     CGFloat w = self.view.bounds.size.width;
-    CGFloat h = self.view.bounds.size.height;
     _themeLabel.frame = CGRectMake(16.0, 24.0, w - 100.0, 24.0);
     _themeSwitch.frame = CGRectMake(w - 72.0, 18.0, 51.0, 31.0);
     _aboutCard.frame = CGRectMake(16.0, 72.0, w - 32.0, 120.0);
