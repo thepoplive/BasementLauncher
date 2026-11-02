@@ -2,7 +2,10 @@
 #import "BOSTheme.h"
 #import "BOSDatabase.h"
 
-@implementation BOSNotesViewController {
+@interface BOSNotesViewController () <UITableViewDataSource, UITableViewDelegate>
+@end
+
+@interface BOSNotesViewController ()BOSNotesViewController {
     UITextField *_field;
     UITextView *_editor;
     UITableView *_list;

@@ -10,6 +10,7 @@
 - (UIColor *)secondaryTextColor;
 - (UIColor *)cardColor;
 - (UIColor *)accentColor;
+- (UIColor *)strokeColor;
 
 - (UIButton *)md3FilledButtonWithTitle:(NSString *)title target:(id)target action:(SEL)action;
 @end

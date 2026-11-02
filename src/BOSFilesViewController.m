@@ -1,7 +1,10 @@
 #import "BOSFilesViewController.h"
 #import "BOSTheme.h"
 
-@implementation BOSFilesViewController {
+@interface BOSFilesViewController () <UITableViewDataSource, UITableViewDelegate>
+@end
+
+@interface BOSFilesViewController ()BOSFilesViewController {
     UITableView *_table;
     NSMutableArray *_entries;
     NSString *_currentPath;

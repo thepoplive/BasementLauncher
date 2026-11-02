@@ -1,7 +1,10 @@
 #import "BOSClockViewController.h"
 #import "BOSTheme.h"
 
-@implementation BOSClockViewController {
+@interface BOSClockViewController () <UITableViewDataSource>
+@end
+
+@interface BOSClockViewController ()BOSClockViewController {
     UILabel *_timeLabel;
     UILabel *_swLabel;
     UIButton *_startButton;

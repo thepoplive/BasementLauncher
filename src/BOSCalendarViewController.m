@@ -2,7 +2,10 @@
 #import "BOSTheme.h"
 #import "BOSDatabase.h"
 
-@implementation BOSCalendarViewController {
+@interface BOSCalendarViewController () <UITableViewDataSource, UITableViewDelegate>
+@end
+
+@interface BOSCalendarViewController ()BOSCalendarViewController {
     UITableView *_table;
     NSArray *_rows;
 }
