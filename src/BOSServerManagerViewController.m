@@ -48,11 +48,13 @@
 - (void)applyTheme {
     self.view.backgroundColor = [[BOSTheme shared] backgroundColor];
     for (int i = 0; i < 3; i++) {
-        [_nameLabels[i] setTextColor:[[BOSTheme shared] textColor]];
-        if ([[_statusLabels[i] text] hasPrefix:@"Running"]) {
-            _statusLabels[i].textColor = [UIColor colorWithRed:0.4 green:0.8 blue:0.4 alpha:1.0];
+        UILabel *nameLabel = _nameLabels[i];
+        UILabel *statusLabel = _statusLabels[i];
+        nameLabel.textColor = [[BOSTheme shared] textColor];
+        if ([statusLabel.text hasPrefix:@"Running"]) {
+            statusLabel.textColor = [UIColor colorWithRed:0.4 green:0.8 blue:0.4 alpha:1.0];
         } else {
-            _statusLabels[i].textColor = [[BOSTheme shared] secondaryTextColor];
+            statusLabel.textColor = [[BOSTheme shared] secondaryTextColor];
         }
     }
     _hintLabel.textColor = [[BOSTheme shared] secondaryTextColor];
