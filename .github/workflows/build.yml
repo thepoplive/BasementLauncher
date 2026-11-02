@@ -11,7 +11,7 @@ jobs:
       - name: Install Theos + SDK
         run: |
           brew install ldid xz
-          git clone --depth 1 https://github.com/theos/theos.git theos
+          git clone --depth 1 --recursive https://github.com/theos/theos.git theos
           rm -rf theos/sdks
           git clone --depth 1 https://github.com/theos/sdks.git theos/sdks
           chmod +x theos/bin/*
