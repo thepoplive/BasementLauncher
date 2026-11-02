@@ -10,14 +10,17 @@ jobs:
 
       - name: Install Theos + SDK
         run: |
-          brew install ldid
+          brew install ldid xz
           git clone --depth 1 https://github.com/theos/theos.git theos
           rm -rf theos/sdks
           git clone --depth 1 https://github.com/theos/sdks.git theos/sdks
+          chmod +x theos/bin/*
+          echo "$(pwd)/theos/bin" >> "$GITHUB_PATH"
 
       - name: Build deb
         run: |
           export THEOS="$(pwd)/theos"
+          export PATH="$THEOS/bin:$PATH"
           make package FINALPACKAGE=1
 
       - uses: actions/upload-artifact@v4
