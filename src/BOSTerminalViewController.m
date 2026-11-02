@@ -2,6 +2,9 @@
 #import "BOSTheme.h"
 #import "BOSProcess.h"
 
+@interface BOSTerminalViewController () <UITextFieldDelegate>
+@end
+
 @implementation BOSTerminalViewController {
     UITextView *_editor;
     UITextField *_field;
@@ -36,7 +39,7 @@
 - (void)runCommand {
     NSString *line = _field.text;
     if (!line.length) return;
-    NSString *out = [BOSProcess outputOfCommand:@"/bin/sh" arguments:@[@"-c", line] ?: @""];
+    NSString *out = [BOSProcess outputOfCommand:@"/bin/sh" arguments:@[@"-c", line ?: @""]] ?: @"";
     NSString *block = [NSString stringWithFormat:@"\n$ %@\n%@", line, out];
     _editor.text = [_editor.text stringByAppendingString:block];
     NSRange bottom = NSMakeRange(_editor.text.length - 1, 1);
