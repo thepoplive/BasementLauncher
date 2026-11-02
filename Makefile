@@ -13,4 +13,4 @@ include $(THEOS_MAKE_PATH)/application.mk
 
 # Xcode 26 SDK dropped armv7 tbds: compile with latest headers, link against legacy SDK
 SYSROOT := $(THEOS_SDKS_PATH)/iPhoneOS10.3.sdk
-_THEOS_TARGET_LDFLAGS := -isysroot "$(SYSROOT)" $(VERSIONFLAGS)
+_THEOS_TARGET_LDFLAGS := -isysroot "$(SYSROOT)" $(VERSIONFLAGS) -Wl,-U,_objc_msgSend_stret
