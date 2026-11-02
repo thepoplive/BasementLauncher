@@ -1,0 +1,25 @@
+name: build
+
+on: [push, workflow_dispatch]
+
+jobs:
+  package:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Theos + SDK
+        run: |
+          brew install ldid
+          git clone --depth 1 https://github.com/theos/theos.git theos
+          git clone --depth 1 https://github.com/theos/sdks.git theos/sdks
+
+      - name: Build deb
+        run: |
+          export THEOS="$(pwd)/theos"
+          make package FINALPACKAGE=1
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: basementos-deb
+          path: packages/*.deb
