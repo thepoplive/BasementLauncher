@@ -8,6 +8,13 @@
 	<string>BasementOS</string>
 	<key>CFBundleExecutable</key>
 	<string>BasementOS</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
+	<key>CFBundleIconFiles</key>
+	<array>
+		<string>AppIcon</string>
+		<string>AppIcon@2x</string>
+	</array>
 	<key>CFBundleIdentifier</key>
 	<string>com.basementos.shell</string>
 	<key>CFBundleInfoDictionaryVersion</key>
