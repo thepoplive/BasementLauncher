@@ -1,4 +1,4 @@
-TARGET := iphone:clang:9.3:8.4.1
+TARGET := iphone:clang:latest:8.4.1
 ARCHS = armv7
 
 include $(THEOS)/makefiles/common.mk
@@ -10,3 +10,6 @@ BasementOS_LDFLAGS = -lsqlite3
 BasementOS_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/application.mk
+
+# Xcode 26 SDK has no armv7 auto-link tbds; link against legacy SDK instead
+SYSROOT := $(THEOS_SDKS_PATH)/iPhoneOS9.3.sdk
