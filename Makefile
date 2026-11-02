@@ -11,5 +11,6 @@ BasementOS_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/application.mk
 
-# Xcode 26 SDK has no armv7 auto-link tbds; link against legacy SDK instead
+# Xcode 26 SDK dropped armv7 tbds: compile with latest headers, link against legacy SDK
 SYSROOT := $(THEOS_SDKS_PATH)/iPhoneOS9.3.sdk
+_THEOS_TARGET_LDFLAGS := -isysroot "$(SYSROOT)" $(VERSIONFLAGS)
