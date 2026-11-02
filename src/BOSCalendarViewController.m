@@ -5,7 +5,7 @@
 @interface BOSCalendarViewController () <UITableViewDataSource, UITableViewDelegate>
 @end
 
-@interface BOSCalendarViewController ()BOSCalendarViewController {
+@implementation BOSCalendarViewController {
     UITableView *_table;
     NSArray *_rows;
 }

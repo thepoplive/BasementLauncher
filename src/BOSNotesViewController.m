@@ -5,7 +5,7 @@
 @interface BOSNotesViewController () <UITableViewDataSource, UITableViewDelegate>
 @end
 
-@interface BOSNotesViewController ()BOSNotesViewController {
+@implementation BOSNotesViewController {
     UITextField *_field;
     UITextView *_editor;
     UITableView *_list;

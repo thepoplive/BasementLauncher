@@ -4,7 +4,7 @@
 @interface BOSClockViewController () <UITableViewDataSource>
 @end
 
-@interface BOSClockViewController ()BOSClockViewController {
+@implementation BOSClockViewController {
     UILabel *_timeLabel;
     UILabel *_swLabel;
     UIButton *_startButton;

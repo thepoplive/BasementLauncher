@@ -4,7 +4,7 @@
 @interface BOSFilesViewController () <UITableViewDataSource, UITableViewDelegate>
 @end
 
-@interface BOSFilesViewController ()BOSFilesViewController {
+@implementation BOSFilesViewController {
     UITableView *_table;
     NSMutableArray *_entries;
     NSString *_currentPath;
