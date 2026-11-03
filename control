@@ -1,8 +1,8 @@
-Package: com.basementos.shell
-Name: BasementOS
-Version: 0.1.2
+Package: com.basementos.launcher
+Name: BasementLauncher
+Version: 0.2.0
 Architecture: iphoneos-arm
-Description: Jailbreak system shell for iPhone 4S (iOS 8.4.1)
+Description: MD3 launcher/home for iPhone 4S (iOS 8.4.1)
 Maintainer: BasementOS
 Author: BasementOS
 Section: Utilities

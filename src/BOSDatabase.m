@@ -89,4 +89,15 @@ static NSString *kDBPath = @"/var/mobile/Library/BasementOS/basementos.sqlite";
     return ok;
 }
 
+- (NSString *)stateForKey:(NSString *)key {
+    NSArray *rows = [self queryWithSQL:@"SELECT value FROM state WHERE key = ?" arguments:@[key]];
+    if (rows.count == 0) return nil;
+    id value = rows[0][@"value"];
+    return [value isKindOfClass:[NSNull class]] ? nil : value;
+}
+
+- (void)setStateValue:(NSString *)value forKey:(NSString *)key {
+    [self executeWithSQL:@"INSERT OR REPLACE INTO state (key, value) VALUES (?, ?)" arguments:@[key, value ?: @""] insertedId:NULL];
+}
+
 @end

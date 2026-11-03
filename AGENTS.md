@@ -28,3 +28,9 @@ BasementOS: system shell для iPhone 4S (iOS 8.4.1, armv7, 512 МБ RAM, lands
 
 ## Пользователь
 Русский, коротко и без формальностей. Не коммитить/не пушить самому — пользователь сам даёт GitHub-репозиторий и токен, CI собирает `.deb`.
+
+## Переименование (0.2.0)
+- Репо `BasementLauncher`, приложение/исполняемый `BasementLauncher`, пакет `com.basementos.launcher` (старый `com.basementos.shell` — удалить на устройстве отдельно).
+- Ресурсы только в `Resources/` (с большой R) — иначе theos не скопирует в .app (Info.plist/icon/services).
+- Ориентация: `BOSNavigationController.supportedInterfaceOrientations` → `[[BOSTheme shared] supportedOrientationsMask]` (mode из state). Новый VC-экран наследуется от обычного UIViewController — маску навигация сама накладывает.
+- Home (`BOSHomeViewController`) — desktop в портрете, CarPlay-рельс в landscape; режим переключается в Settings, раскладки в `applyMode`.
