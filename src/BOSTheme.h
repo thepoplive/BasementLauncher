@@ -24,7 +24,7 @@ extern NSString *const BOSThemeDidChangeNotification;
 - (NSString *)accentHex;
 - (void)setAccentHex:(NSString *)hex;
 
-- (NSUInteger)supportedOrientationsMask;
+- (UIInterfaceOrientationMask)supportedOrientationsMask;
 
 - (UIButton *)md3FilledButtonWithTitle:(NSString *)title target:(id)target action:(SEL)action;
 

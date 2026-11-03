@@ -73,7 +73,7 @@ static UIColor *BOSColorFromHex(NSString *hex) {
     [UIViewController attemptRotationToDeviceOrientation];
 }
 
-- (NSUInteger)supportedOrientationsMask {
+- (UIInterfaceOrientationMask)supportedOrientationsMask {
     if (_landscapeMode) return UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
     return UIInterfaceOrientationMaskPortrait;
 }

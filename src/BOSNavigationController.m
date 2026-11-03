@@ -7,7 +7,7 @@
     return YES;
 }
 
-- (NSUInteger)supportedInterfaceOrientations {
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     return [[BOSTheme shared] supportedOrientationsMask];
 }
 
