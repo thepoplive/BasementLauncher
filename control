@@ -1,6 +1,6 @@
 Package: com.basementos.launcher
 Name: BasementLauncher
-Version: 0.2.0
+Version: 0.2.1
 Architecture: iphoneos-arm
 Description: MD3 launcher/home for iPhone 4S (iOS 8.4.1)
 Maintainer: BasementOS
